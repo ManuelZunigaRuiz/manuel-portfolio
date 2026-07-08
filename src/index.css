@@ -1,1 +1,303 @@
+/* =====================================================
+   MANUEL RUIZ ZUNIGA PORTFOLIO
+   Global Design System
+   Version: 1.0
+===================================================== */
 
+
+/* =====================================================
+   1. DESIGN TOKENS
+===================================================== */
+
+:root {
+
+  /* -------------------------
+     Background / Elevation
+  ------------------------- */
+
+  --bg-base: #0B0C10;
+  --bg-surface: #13151C;
+  --bg-elevated: #1D202B;
+
+
+  /* -------------------------
+     Typography Colors
+  ------------------------- */
+
+  --text-primary: #F3F4F6;
+  --text-secondary: #9CA3AF;
+  --text-muted: #6B7280;
+
+
+  /* -------------------------
+     Borders
+  ------------------------- */
+
+  --border-subtle: #1F2937;
+  --border-active: #374151;
+
+
+  /* -------------------------
+     Functional Accent Colors
+  ------------------------- */
+
+  --accent-globuy: #10B981;
+  --accent-revolut: #8B5CF6;
+  --accent-globite: #EF4444;
+
+
+  /* -------------------------
+     Accessibility
+  ------------------------- */
+
+  --ring-focus: #3B82F6;
+
+
+
+  /* =====================================================
+     TYPOGRAPHY SCALE
+  ===================================================== */
+
+
+  --font-main: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, monospace;
+
+
+  --text-h1: 2.5rem;
+  --text-h2: 1.75rem;
+  --text-h3: 1.25rem;
+
+  --text-body: 0.9375rem;
+  --text-caption: 0.75rem;
+
+
+
+  /* =====================================================
+     SPACING SYSTEM (8px GRID)
+  ===================================================== */
+
+
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+
+
+
+  /* =====================================================
+     BORDER RADIUS
+  ===================================================== */
+
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+
+
+  /* =====================================================
+     MOTION
+  ===================================================== */
+
+
+  --ease-standard:
+  cubic-bezier(0.25,1,0.5,1);
+
+  --ease-expressive:
+  cubic-bezier(0.87,0,0.13,1);
+
+
+  --duration-fast:150ms;
+  --duration-normal:300ms;
+  --duration-page:350ms;
+
+
+}
+
+
+
+/* =====================================================
+   2. RESET GLOBALE
+===================================================== */
+
+
+*,
+*::before,
+*::after {
+
+  box-sizing:border-box;
+
+}
+
+
+
+html {
+
+  scroll-behavior:smooth;
+
+}
+
+
+
+body {
+
+  margin:0;
+
+  background:
+  var(--bg-base);
+
+  color:
+  var(--text-primary);
+
+  font-family:
+  var(--font-main);
+
+  font-size:
+  var(--text-body);
+
+  line-height:
+  1.5;
+
+  -webkit-font-smoothing:
+  antialiased;
+
+}
+
+
+
+/* =====================================================
+   3. ELEMENT DEFAULTS
+===================================================== */
+
+
+img {
+
+  max-width:100%;
+
+  display:block;
+
+}
+
+
+
+a {
+
+  color:inherit;
+
+  text-decoration:none;
+
+}
+
+
+
+button,
+input,
+textarea {
+
+  font-family:inherit;
+
+}
+
+
+
+/* =====================================================
+   4. UTILITY CLASSES
+===================================================== */
+
+
+.text-primary {
+
+  color:
+  var(--text-primary);
+
+}
+
+
+
+.text-secondary {
+
+  color:
+  var(--text-secondary);
+
+}
+
+
+
+.text-muted {
+
+  color:
+  var(--text-muted);
+
+}
+
+
+
+.bg-surface {
+
+  background:
+  var(--bg-surface);
+
+}
+
+
+
+.border-subtle {
+
+  border:
+  1px solid var(--border-subtle);
+
+}
+
+
+
+/* =====================================================
+   5. COMPONENT FOUNDATION
+===================================================== */
+
+
+.card {
+
+  background:
+  var(--bg-surface);
+
+  border:
+  1px solid var(--border-subtle);
+
+  border-radius:
+  var(--radius-lg);
+
+  transition:
+  border-color var(--duration-normal) var(--ease-standard),
+  transform var(--duration-normal) var(--ease-standard);
+
+}
+
+
+
+.card:hover {
+
+  border-color:
+  var(--border-active);
+
+  transform:
+  translateY(-2px);
+
+}
+
+
+
+/* =====================================================
+   6. ACCESSIBILITY
+===================================================== */
+
+
+:focus-visible {
+
+  outline:
+  2px solid var(--ring-focus);
+
+  outline-offset:
+  3px;
+
+}
