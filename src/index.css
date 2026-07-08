@@ -465,3 +465,191 @@ textarea {
     height: 380px;
   }
 }
+/* =====================================================
+   10. LAYOUT: SELECTED WORK SECTION
+===================================================== */
+
+.selected-work-section {
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-lg);
+}
+
+.section-title {
+  font-size: var(--text-h2);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.section-description {
+  font-size: var(--text-body);
+  max-width: 480px;
+  margin: 0;
+}
+
+
+/* =====================================================
+   11. COMPONENT: PROJECTS GRID & CARDS
+===================================================== */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: border-color var(--duration-normal) var(--ease-standard),
+              transform var(--duration-normal) var(--ease-standard);
+}
+
+.project-card:hover {
+  border-color: var(--border-active);
+  transform: translateY(-4px); /* Feedback di elevazione micro-interattivo */
+}
+
+.project-card-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-card-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: var(--bg-base);
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.project-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-normal) var(--ease-standard);
+}
+
+.project-card:hover .project-card-image {
+  transform: scale(1.02); /* Zoom impercettibile ad altissimo impatto visivo */
+}
+
+.project-card-info {
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: var(--space-sm);
+}
+
+.project-card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-xs);
+}
+
+.project-category {
+  font-family: var(--font-mono);
+  font-size: var(--text-caption);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+
+/* Component: Micro-Badges per KPI */
+.project-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px var(--space-sm);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: var(--text-caption);
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+
+.project-badge.accent-globuy {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--accent-globuy);
+  border-color: rgba(16, 185, 129, 0.2);
+}
+
+.project-badge.accent-revolut {
+  background: rgba(139, 92, 246, 0.1);
+  color: var(--accent-revolut);
+  border-color: rgba(139, 92, 246, 0.2);
+}
+
+.project-badge.accent-globite {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--accent-globite);
+  border-color: rgba(239, 68, 68, 0.2);
+}
+
+.project-card-title {
+  font-size: var(--text-h3);
+  font-weight: 700;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.project-card-desc {
+  font-size: var(--text-body);
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin: 0;
+  flex-grow: 1; /* Allinea perfettamente l'altezza delle descrizioni */
+}
+
+
+/* Micro-interazione della freccia */
+.project-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--text-caption);
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-top: var(--space-sm);
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+.project-card:hover .project-card-cta {
+  color: var(--text-primary);
+}
+
+.project-card-cta .arrow {
+  transition: transform var(--duration-fast) var(--ease-standard);
+}
+
+.project-card:hover .project-card-cta .arrow {
+  transform: translateX(4px); /* Movimento traslazionale fluido */
+}
+
+
+/* Responsive Grid System */
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
