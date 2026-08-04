@@ -1,1 +1,170 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Standard -->
+  <title>Case Study: GloBuy — Manuel Ruiz Zuniga</title>
+  <meta name="description" content="Case study di GloBuy, marketplace B2B per l’economia circolare degli scarti industriali nobili. Analisi di prodotto e modello di business di Manuel Ruiz Zuniga.">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Precaricamento Font -->
+  <link rel="preload" href="/assets/fonts/Inter-VariableFont_slnt,wght.woff2" as="font" type="font/woff2" crossorigin>
 
+  <!-- Collegamento al Design System CSS Globale -->
+  <link rel="stylesheet" href="/src/index.css">
+</head>
+<body>
+
+  <!-- Barra di Navigazione Globale (Assoluta alla Root) -->
+  <nav class="navbar" role="navigation" aria-label="Menu principale">
+    <div class="container navbar-container">
+      <a href="/index.html" class="navbar-logo" aria-label="Manuel Ruiz Zuniga Home">MRZ</a>
+      <div class="navbar-links">
+        <a href="/index.html" class="navbar-link">Home</a>
+        <a href="/about.html" class="navbar-link">About</a>
+        <a href="/experience.html" class="navbar-link">Experience</a>
+        <a href="/contact.html" class="navbar-link">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenuto del Case Study -->
+  <main class="container" id="main-content">
+    
+    <!-- Sezione Hero del Progetto -->
+    <header class="case-hero">
+      <span class="hero-overtitle text-accent-globuy font-mono">01 / PRODUCT CONCEPT</span>
+      <h1 class="case-title text-primary">GLOBUY: THE B2B CIRCULAR MARKETPLACE</h1>
+      <p class="case-tagline text-secondary">
+        Ridurre i costi di smaltimento industriale e la scarsità di materie prime nobili trasformandoli in opportunità di business per PMI e artigiani.
+      </p>
+      
+      <!-- Snapshot Metadata Box (Riassunto per Scansione Rapida) -->
+      <div class="snapshot-grid">
+        <div class="snapshot-item">
+          <span class="snapshot-label">ROLE</span>
+          <span class="snapshot-value">Lead UX Researcher & Digital Strategist</span>
+        </div>
+        <div class="snapshot-item">
+          <span class="snapshot-label">TIMELINE</span>
+          <span class="snapshot-value">6 Weeks (UFS06 Course Project)</span>
+        </div>
+        <div class="snapshot-item">
+          <span class="snapshot-label">TOOLS</span>
+          <span class="snapshot-value">Figma, v0 (Vercel), MAXQDA</span>
+        </div>
+        <div class="snapshot-item">
+          <span class="snapshot-label">OUTCOME</span>
+          <span class="snapshot-value">€2.4B Market Gap Identified</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Blocco 1: Product Discovery (La Ricerca) -->
+    <section class="case-block" aria-labelledby="discovery-title">
+      <h2 id="discovery-title" class="case-block-title text-primary">1. PRODUCT DISCOVERY & TREND VALIDATION</h2>
+      <p class="text-secondary leading-relaxed">
+        Prima dell’interfaccia, ho analizzato dati sull’economia circolare in Italia per verificare la solidità del trend. La crescita prolungata oltre 24 mesi indica che il recupero di materiali non è un fenomeno temporaneo, ma una risposta strutturale all’aumento dei costi delle materie prime vergini.
+      </p>
+      <p class="text-secondary leading-relaxed" style="margin-top: var(--space-md);">
+        L’analisi di un dataset di transazioni e richieste di acquisto mostra una flessione tecnica a metà anno seguita da una ripresa. Questo pattern riflette la stagionalità del manifatturiero e suggerisce che la domanda è ciclica, non volatile, elemento chiave per progettare l’asta e il modello di monetizzazione della piattaforma.
+      </p>
+    </section>
+
+    <!-- Blocco 2: The Problem Statement (Il Dolore Quantificato) -->
+    <section class="case-block" aria-labelledby="problem-title">
+      <h2 id="problem-title" class="case-block-title text-primary">2. THE FRICTION STATEMENT</h2>
+      <div class="case-grid-two-cols">
+        
+        <!-- Il Problema (Pannello Crimson) -->
+        <div class="case-panel problem-panel">
+          <span class="font-mono text-xs text-accent-globuy uppercase font-semibold">The Pain</span>
+          <h3 class="text-h3 font-bold text-primary">Costi e scarsità</h3>
+          <p class="text-secondary leading-relaxed">
+            Le aziende manifatturiere sostengono costi elevati per smaltire scarti nobili pre‑consumo (pelle, metalli, legno) classificati come rifiuti. In parallelo, artigiani e PMI faticano ad accedere a materie prime di qualità a prezzi sostenibili, con forti vincoli di approvvigionamento.
+          </p>
+        </div>
+
+        <!-- La Soluzione (Pannello Emerald) -->
+        <div class="case-panel solution-panel">
+          <span class="font-mono text-xs text-accent-globuy uppercase font-semibold">The Solution</span>
+          <h3 class="text-h3 font-bold text-primary">Direct B2B Connect</h3>
+          <p class="text-secondary leading-relaxed">
+            GloBuy connette direttamente chi genera scarti industriali con chi li utilizza. L’accesso è limitato a Partite IVA verificate per garantire conformità fiscale, mentre un algoritmo di <strong>AI pricing</strong> suggerisce il prezzo ottimale sulla base di dati storici di mercato, proteggendo i margini di entrambe le parti.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Blocco 3: Product Delivery & Design Showcase -->
+    <section class="case-block" aria-labelledby="delivery-title">
+      <h2 id="delivery-title" class="case-block-title text-primary">3. PRODUCT DELIVERY & UI ARCHITECTURE</h2>
+      <p class="text-secondary leading-relaxed">
+        L’interfaccia è stata progettata per ridurre lo sforzo di pubblicazione e massimizzare la velocità di matching. Il flusso principale si articola in tre step: caricamento dell’immagine dello scarto, calcolo automatico del prezzo suggerito dall’algoritmo e matching con artigiani e PMI nel raggio di prossimità, testato in prototipo con Figma e v0 (Vercel).
+      </p>
+
+      <!-- Visual Showcase -->
+      <div class="rounded-lg overflow-hidden border border-subtle aspect-video" style="margin-top: var(--space-lg); max-width: 100%;">
+        <img src="/assets/images/globuy-mockup.webp" alt="Interfaccia prototipale della dashboard di GloBuy" class="object-cover w-full h-full">
+      </div>
+    </section>
+
+    <!-- Blocco 4: Outcome & KPIs (La Misurazione) -->
+    <section class="case-block" aria-labelledby="outcome-title">
+      <h2 id="outcome-title" class="case-block-title text-primary">4. OUTCOME & PERFORMANCE METRICS</h2>
+      <p class="text-secondary leading-relaxed">
+        Il modello di monetizzazione è pensato per essere autofinanziato e scalabile. La piattaforma applica una commissione fissa solo sulle transazioni concluse e offre slot di “Premium Visibility” per lotti ingombranti o urgenti, trasformando costi di smaltimento in ricavi ricorrenti per gli operatori.
+      </p>
+
+      <!-- KPI Dashboard -->
+      <div class="kpi-dashboard">
+        <div class="kpi-card">
+          <span class="kpi-value text-accent-globuy">€2.4B</span>
+          <span class="kpi-label">Market Potential stimato</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-value text-accent-globuy">10%</span>
+          <span class="kpi-label">Fee di intermediazione per transazione</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-value text-accent-globuy">Alto</span>
+          <span class="kpi-label">Impatto operativo stimato per PMI e artigiani</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blocco 5: Technical Retrospective (L'Umiltà e l'Onestà Intellettuale) -->
+    <section class="case-block" aria-labelledby="retro-title">
+      <h2 id="retro-title" class="case-block-title text-primary">5. TECHNICAL RETROSPECTIVE & TRADE-OFFS</h2>
+      <p class="text-secondary leading-relaxed">
+        Il concept evidenzia due vincoli critici che richiederebbero ulteriori cicli di test e validazione prima di un rollout reale.
+      </p>
+
+      <div class="retro-container">
+        <!-- Trade-off 1: Conformità Regolatoria -->
+        <div class="retro-card globuy-accent">
+          <h3 class="retro-card-title">01 / Regulatory compliance in Italia</h3>
+          <p class="retro-card-desc">
+            Il trasferimento di scarti industriali è regolato da formulari e obblighi documentali stringenti. La piattaforma dovrebbe integrare firma digitale e generazione automatica dei documenti legali nel flusso transazionale per ridurre frizioni e garantire conformità agli utenti.
+          </p>
+        </div>
+
+        <!-- Trade-off 2: Problema di Avvio a Freddo dell'AI Pricing -->
+        <div class="retro-card globuy-accent">
+          <h3 class="retro-card-title">02 / Cold-start per AI pricing</h3>
+          <p class="retro-card-desc">
+            L’algoritmo di stima del prezzo richiede uno storico sufficiente di transazioni per essere affidabile. Nella fase iniziale sarebbe necessario un modello ibrido, basato su tabelle di prezzo predefinite per categoria merceologica e aggiustamenti progressivi man mano che aumentano i dati disponibili.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Logica JavaScript ES6 Module -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,1 +1,133 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Standard -->
+  <title>Contact — Manuel Ruiz Zuniga</title>
+  <meta name="description" content="Contatta Manuel Ruiz Zuniga, data-driven marketer specializzato in Data Analytics, Growth Strategy e Performance Marketing. Disponibile per stage curriculare di 6 mesi.">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Precaricamento Font -->
+  <link rel="preload" href="/assets/fonts/Inter-VariableFont_slnt,wght.woff2" as="font" type="font/woff2" crossorigin>
 
+  <!-- Collegamento al Design System CSS Globale -->
+  <link rel="stylesheet" href="/src/index.css">
+</head>
+<body>
+
+  <!-- Barra di Navigazione Globale (Link 'Contact' Attivo) -->
+  <nav class="navbar" role="navigation" aria-label="Menu principale">
+    <div class="container navbar-container">
+      <a href="/" class="navbar-logo" aria-label="Manuel Ruiz Zuniga Home">MRZ</a>
+      <div class="navbar-links">
+        <a href="/" class="navbar-link">Home</a>
+        <a href="/about.html" class="navbar-link">About</a>
+        <a href="/experience.html" class="navbar-link">Experience</a>
+        <a href="/contact.html" class="navbar-link active" aria-current="page">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenuto Principale -->
+  <main class="container" id="main-content">
+    
+    <!-- Sezione Contatti (Contact Grid) -->
+    <section class="contact-section" aria-labelledby="contact-title">
+      <div class="contact-grid">
+        
+        <!-- Colonna Sinistra: Canali di Contatto Primari -->
+        <div class="contact-info-block">
+          <div class="space-y-xs">
+            <span class="hero-overtitle">GET IN TOUCH</span>
+            <h1 id="contact-title" class="about-title text-primary">PARLIAMO DI CRESCITA.</h1>
+            <p class="about-description">
+              Se vuoi discutere di uno stage curriculare di 6 mesi o valutare progetti in ambito data analytics, growth strategy e performance marketing, puoi usare direttamente i contatti qui sotto.
+            </p>
+          </div>
+
+          <div class="contact-methods" style="flex-direction: column; gap: var(--space-md);">
+            <!-- Email -->
+            <div class="contact-item">
+              <span class="contact-label">EMAIL</span>
+              <div class="contact-action-wrapper">
+                <a href="mailto:derbysix.11.mz@gmail.com" class="contact-value contact-value-email text-primary">derbysix.11.mz@gmail.com</a>
+                <button class="copy-btn copy-email-btn" aria-label="Copia indirizzo email negli appunti">
+                  <span class="copy-icon copy-icon-symbol">📋</span>
+                </button>
+              </div>
+            </div>
+            
+            <!-- Telefono -->
+            <div class="contact-item">
+              <span class="contact-label">TELEFONO</span>
+              <a href="tel:+393756978614" class="contact-value text-primary">+39 375 697 8614</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Colonna Destra: Modulo Contatti (Netlify Forms Abilitato) -->
+        <form name="portfolio-contact" method="POST" data-netlify="true" class="contact-form">
+          <!-- Campo nascosto per Netlify Forms -->
+          <input type="hidden" name="form-name" value="portfolio-contact">
+          
+          <div class="form-group">
+            <label for="form-name" class="form-label">Nome</label>
+            <input type="text" id="form-name" name="name" required class="form-input">
+          </div>
+          
+          <div class="form-group">
+            <label for="form-email" class="form-label">Email</label>
+            <input type="email" id="form-email" name="email" required class="form-input">
+          </div>
+          
+          <div class="form-group">
+            <label for="form-message" class="form-label">Messaggio</label>
+            <textarea id="form-message" name="message" required class="form-textarea"></textarea>
+          </div>
+          
+          <button type="submit" class="form-submit-btn">Invia messaggio</button>
+        </form>
+
+      </div>
+    </section>
+
+    <!-- Footer / Piè di pagina -->
+    <footer class="footer-section" aria-labelledby="footer-title">
+      <div class="footer-content">
+        <span class="footer-overtitle">GET IN TOUCH</span>
+        <h2 id="footer-title" class="footer-title text-primary">Parliamo di crescita.</h2>
+        <p class="footer-description text-secondary">
+          Sono disponibile per uno stage curriculare di 6 mesi in ambito digital marketing, growth o product marketing. Se ti occupi di selezione o lavori in una tech company che cerca profili data-driven, possiamo valutare insieme progetti e ruoli compatibili.
+        </p>
+        
+        <div class="contact-methods">
+          <div class="contact-item">
+            <span class="contact-label">EMAIL</span>
+            <div class="contact-action-wrapper">
+              <a href="mailto:derbysix.11.mz@gmail.com" class="contact-value contact-value-email text-primary">derbysix.11.mz@gmail.com</a>
+              <button class="copy-btn copy-email-btn" aria-label="Copia indirizzo email negli appunti">
+                <span class="copy-icon copy-icon-symbol">📋</span>
+              </button>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <span class="contact-label">TELEFONO</span>
+            <a href="tel:+393756978614" class="contact-value text-primary">+39 375 697 8614</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="copyright text-muted">© 2026 Manuel Ruiz Zuniga. Built with Vite, HTML5, CSS Design System & Vanilla JS.</p>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Logica JavaScript ES6 Module -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
