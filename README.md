@@ -18,4 +18,6 @@ A 6-month internship in digital marketing, growth, or product marketing.
 
 ## Contact
 LinkedIn: www.linkedin.com/in/manuel-zuniga-67117a39a
+
+
 Email: zuniga.manuel.ruiz@gmail.com
