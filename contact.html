@@ -67,27 +67,25 @@
           </div>
         </div>
 
-        <!-- Colonna Destra: Modulo Contatti (Netlify Forms Abilitato) -->
-        <form name="portfolio-contact" method="POST" data-netlify="true" class="contact-form">
-          <!-- Campo nascosto per Netlify Forms -->
-          <input type="hidden" name="form-name" value="portfolio-contact">
-          
+        <!-- Colonna Destra: Modulo Contatti -->
+        <form id="portfolio-contact-form" class="contact-form">
           <div class="form-group">
             <label for="form-name" class="form-label">Nome</label>
             <input type="text" id="form-name" name="name" required class="form-input">
           </div>
-          
+
           <div class="form-group">
             <label for="form-email" class="form-label">Email</label>
             <input type="email" id="form-email" name="email" required class="form-input">
           </div>
-          
+
           <div class="form-group">
             <label for="form-message" class="form-label">Messaggio</label>
             <textarea id="form-message" name="message" required class="form-textarea"></textarea>
           </div>
-          
+
           <button type="submit" class="form-submit-btn">Invia messaggio</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
         </form>
 
       </div>
