@@ -7,6 +7,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initEmailCopy();
   initScrollAnimations();
+  initContactForm();
 });
 
 /**
@@ -72,4 +73,45 @@ function initScrollAnimations() {
   // Trova tutte le sezioni che hanno la classe di reveal impostata
   const animatedElements = document.querySelectorAll('.reveal-on-scroll');
   animatedElements.forEach(el => observer.observe(el));
+}
+
+/**
+ * Invia il modulo di contatto via fetch alla funzione serverless,
+ * evitando il redirect di pagina e mostrando un messaggio di stato inline.
+ */
+function initContactForm() {
+  const form = document.getElementById('portfolio-contact-form');
+  if (!form) return;
+
+  const statusEl = document.getElementById('form-status');
+  const submitBtn = form.querySelector('.form-submit-btn');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const name = form.querySelector('#form-name').value;
+    const email = form.querySelector('#form-email').value;
+    const message = form.querySelector('#form-message').value;
+
+    submitBtn.disabled = true;
+    statusEl.textContent = 'Invio in corso...';
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      if (!response.ok) throw new Error('Request failed');
+
+      statusEl.textContent = 'Messaggio inviato! Ti risponderò al più presto.';
+      form.reset();
+    } catch (err) {
+      console.error('Invio del modulo di contatto non riuscito: ', err);
+      statusEl.textContent = 'Invio non riuscito. Riprova o scrivimi direttamente via email.';
+    } finally {
+      submitBtn.disabled = false;
+    }
+  });
 }
